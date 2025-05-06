@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookiebot Banner</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       /* Custom transitions for accordion animations */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: <weight>;
+        font-style: normal;
+      }
       .accordion-content {
         max-height: 0;
         overflow: hidden;
@@ -31,7 +55,7 @@
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAq3SURBVGhDxZoJXxpJE4f3+3+LDSCabLKJiQcKHokCcimX4gGIF0ZlFDmFgXr/Vd2NA46aZPfN1vzKmenp4+ma6uruwT+Gw2ERWrMHg9rQtmvDIc64H9r9WqfRqLWs29+vtxbartcGdk+xaD7bsIGZwZs0JjbVjktUCodpbzFA2S+fKTs3C+WzU93SXtMfLPNllnYD83S48Y2+l46IhgPNpoSZGdzS99S0rim3vEwRn4+iPi9tT01Rws/q+82q2o17vRQGR2p5ge6vLkE4FM7BYGiNwJu3NYp//kxh7xuKzfgoDk2g0JZRVDI6/6z+ZLkYNO7xUNLvpZ1ppHneUPzTR2pcXwk4XEaDD4e0GwpR5I2HEm+npaHk+7/oMLJJZ/ksne/m6HyPNf8P9aU6cnTG7UC5zWI0TKm/P1BsCiwzfop6PZRfWoK5++wqCrx+UQWsD67hpzjOmYV5aure/VfCXt22bigXWALbFKX8forBoLenFQM+sCrJBEWmPBSbnqLYh/dUv/kuhdmjhnIMtE4eSMPAEZWm3MVZ4vljvP4BvIClZVkU+/gRPs8u9CeV8SaGA9v6o9/rWPsrQYrjlbB/Fda/SQFVTP11E/R6pEa63S7VajU6PT2lg4MDKhQKuD6jTqerc/yMMH5frg6jEQxU+LzPQ4XAItntrvXHQ6dlZRcXKI7RHMGrqCQSkpl77ISalMdnQ7qGW+WyWdrc3KRlRKW5uTn6+vUrFYtFajQaZNv2i3W5yyP4aXoHRn1DCXhFfn6OHu6bBnweFvdJ6Kkkk5J50posk2mWdUep1DZgg7QIX1xE3F/CANrf36eHhwedy70ulufSlYyDR30A92vwhgbPw+JJsbiHjuHvbsINDAbKj/m6WD6m0MoaLSwuAXyFAkshWlldo4uLC8nzb4gBP2FwWJv9PD8/r8G7LSvH4LD4a+AsDJ/P5wU4sBSk5dCqQC8HV6ha1YP6RUv+uIzAMzsSPJ4F58F5rF1lJA4IPu/u7dHCQgBWDlEQ0MvBEMCX6fi4MsozHKgyXEzK4kXJPR88ffNz5H3AYL7CQKaBrcoiXRdS908s7nOAd9oj8LgH4HpwsnBxBaAqKsE9xDVgXaPs29up1JgbCRjOPMBFBZyTbbIHPZxV3k6zSUmMi8JGmPrdjrSHWVHKsIz5+BT7uAFvaPDAy+As9XqdQuIWQW1pBR6ExTkEsphOilWltFO4AwDHc8SYkXX7zXvKb2xQZmWV2jdXqnO6zV8C57IyJQjIkNLp9Ji1GX4xsEzJ5LY8NwJ7ydG0anSexfS9k6ZSKkn7WxG6OcHARVZM2jo3rvttuizs0iZm7VxohXrt9ujpU3D2cY4qPwDOYmH2CmItY4CNxRm8cgIfdYgNi3GT1mWV9uAClXiSDte/0tbMOyySzELUplbthorbO5SEq2UwXqoHBWo37sTljB3cwV9zFQf4Hg9IzFgGmnUJjXE4rNcbkodF3o40DLfAIZVAittJOtgKy3Xt+hI+vU7bcwvoWISs0xOy+x15xrll4rNxxedfsbhuk3q9HoXDEYkcwdCasjaUfX0zHMVE01MZIdyUHPBfrJklrY23FZ+dg7Wv5b52dkZbb9/R7moIBVRZ6SZAbRnEqryqbRyc55qcgN+/Dn53d68tzG6yLtesDB6LJRDJVChjkUZFca0CBx0l47T/FesfpJmc3dtbyoSClFkLUfv+ThC53KRMgqfAKBZv1l8Hv6hWBXI5yMCP4OzfiURqvEG+BnBPN9m5u6U4Qm3jusoP+fXBqn3pgP3QoezmBu0jlMLcLuDcHXfw7o+AVyonFACkAleuYiy+BYvzAorFaW0JdzhK29v0zT9DufVVyq6uImqsUfOmJt4vI6BvU6/V+jnwBQc4rw4nwU095VJZrKuglcW5Ewy+gajR7erFFApw/O0zRB8Nwn+vsOk+xarxPJ+TqFHFfbfTEiQJtaqk6gRf4M9jB56Cs48zeMcdXE/5uvwxZstJcNYlhEOekG5v71RGnf+h1aVyNo9pOk3nRwcAeRy8LBI1OPJwB3Uh0wnz1pRw2gQ4GHOvWVzXSefnF1iqqtnS6Sqsi5iQSsWy5JNGAfMA1+l2mlREPWn4sG1juoFJ5bnJZwAlQYq7iDt41gnu5uNcL0vt5kYWVGZR5dRAAH6+FdN+ziFQRf5uo077sS3qNO6VG5jKflLcwecB/gPhsNPpYDfzzWF1pWbqX0J8N2twHpQ95N/f2KSbin4TCM6/F9wh6XRG3GISmq95kEYiUZmoWKzvVcpi27abilP5ED7eV2/hV+Qfg1erlyqWa/BJ5cGbz+/JW8IOXBZOcENqYuDyDMpv4lfkH4PbiLfRrbgAcig01h4p7jnWHx2VVH7xbB6R+Atws77+WXkVPPsCuPHPy8sr8XMZqFh+jqzPndDKW7hCYV8iCYuEPq1OcaZNPh+7ljmWwbcB7nEBf2YHNCm5XA6+voj4zaAKfMz6YvkAlgIJWQqPCXgYSi1bn3aGvwrc3yMK6ecsJocC94LRC3AOhz8IbiriDz6xWEw+QzyBHqnazoWwo8lkcnR9fYOBq96Am7SxcSiXy7JR4V0WyxPwjAFnizvA2ccTr4CbyrihaDSKDfP4bsipnMbr9QX4PbvPt80wpTMZ2j84oGKpREfQvUKBklhghbBBWVlZoasr9a3S2ZY+OcDHLI5d/tIjuPkgNOquQx7hO5TaVlu5Rfb7ZzpgOsERiQe2KK65Q/MLAZr9PIe1fhhLZ71smJB/Fdzs5m1Ei1K5Qmvr38Y64AbvVB7gnJ93T4XCweiLl6nXKa+AP7oKf1cp6w9CzkUQi3mFI3j9qNVq0+FRkTbgDrxLYv/nyYrDI99LmnyeU2k8C+/uFqiODYoRU++kmKnrTMLho493DDh/guOPnlGfh8qY8Vgk/jrQTcWmkcmGer0HDMRrOjw8hD+nJbJsxWOUgCG2d3bg3/tUvbykTlftL1kea38q/MTE/9OdtPy8kwB8ZnGO2rzI6j90Lf41IjrtpbjvDR1ufJVi8uKevj1XcbUW0njx5eYCLG6dN8Kp8kjv9Q4SMYrBjVM+L7Fb92Bs9WEfluGvoXG/h1If3lP7Tsdg9ghU8Ez9SvgZuxWrwOg0Pjmu+Uby6HyjdIjc6rzm2nSq06pTcvYTpX1TcGUPFTc3UYf+Dej+pEIxvIrYDB7Cj/J4Ax0sTf9r6bXuqbC+RjGvj3b80/L9voZQyswCjsUIZQKLtAkfTwA+jt4l5mapgtF8Uy7K7541LFOV4hr3Ny8p8jy5dqaZe9Gy1hJda+Xrk2yaduY+U4QH5cy0WHtn7gt2hNiKMzh8Ufzi/vKCYu//oi3Ap/1+GaxhrA+ifi8UAxcVRPE25BppkRfV55LmpsiHsSXK9/o6jGsOFPwLRPzdFMX4/PYt3Z2dyJtgZmVxLXVs01Kfv1CEf1cEaGLGJxtUDkNJ/9T/R6d1G4BVZ/6BFm2jAwwe9f5JidmPZJ0ca8pH8PGfxHttutjL0d5KiNKfZinz8eNIs3KvNPvpk4tyHrfzc6qec93pURtI5/PsLBiCdJpP0+ChpeGUMDODyz8hDPp2zR7YtcFQ/SNCr92sNa6/16zqWc26PH/UqlZ9f+t85qaOvM/pLfKwmrx83fz+XRiYjXkGzMb/KCH3w+L/AD0sBvNJmHMGAAAAAElFTkSuQmCC"
             alt="logo"
           />
-          <!-- <button class="text-gray-500 hover:text-gray-700" id="close-banner">
+          <!-- <button class="text-gray-500 hover:" id="close-banner">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -140,13 +164,13 @@
             Toestemming
           </button>
           <button
-            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:"
             data-tab="tab2"
           >
             Details
           </button>
           <button
-            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:"
             data-tab="tab3"
           >
             Over
@@ -189,7 +213,7 @@
                 >
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <span class="font-medium text-gray-800 flex items-center">
+                      <span class="text-gray-800 font-bold flex items-center">
                         <svg
                           class="mr-4 accordion-icon w-5 h-5 text-gray-500 transform transition-transform duration-200"
                           fill="none"
@@ -224,7 +248,7 @@
                         ></div>
                       </label>
                     </div>
-                    <p class="text-xs text-gray-500 mt-4">
+                    <p class="mt-4">
                       Noodzakelijke cookies helpen een website bruikbaarder te
                       maken, door basisfuncties als paginanavigatie en toegang
                       tot beveiligde gedeelten van de website mogelijk te maken.
@@ -244,7 +268,8 @@
                           class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
                         >
                           <div class="flex justify-between items-center">
-                            <span class="text-sm font-medium text-gray-700"
+                            <span
+                              class="text-gray-800 font-bold flex items-center"
                               >Cookiebot</span
                             >
                             <svg
@@ -263,7 +288,7 @@
                             </svg>
                           </div>
                           <a
-                            class="font-bold text-gray-500"
+                            class="font-bold"
                             href="https://www.cookiebot.com/goto/privacy-policy/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -272,15 +297,17 @@
                         </summary>
 
                         <div
-                          class="p-3 bg-gray-200 text-xs text-gray-700 divide-y divide-gray-300 space-y-4"
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
                         >
-                          <strong>CookieConsent</strong>
-                          <p>
+                          <strong class="p-3">CookieConsent</strong>
+                          <p class="p-3">
                             Slaat de cookiestatus van de gebruiker op voor het
                             huidige domein
                           </p>
-                          <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
-                          <p><strong>Type:</strong> HTTP-cookie</p>
+                          <p class="p-3">
+                            <strong>Maximale bewaartermijn:</strong> 1 jaar
+                          </p>
+                          <p class="p-3"><strong>Type:</strong> HTTP-cookie</p>
                         </div>
                       </details>
                     </div>
@@ -298,7 +325,7 @@
                 >
                   <div class="w-full">
                     <div class="flex justify-between">
-                      <span class="font-medium text-gray-800 flex items-center">
+                      <span class="text-gray-800 font-bold flex items-center">
                         <svg
                           class="mr-4 accordion-icon w-5 h-5 text-gray-500 transform transition-transform duration-200"
                           fill="none"
@@ -314,7 +341,7 @@
                         >Voorkeuren
                         <span
                           class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
-                          >10</span
+                          >4</span
                         >
                       </span>
                       <label class="relative inline-flex items-center">
@@ -332,8 +359,11 @@
                         ></div>
                       </label>
                     </div>
-                    <p class="text-xs text-gray-500 mt-4">
-                     Voorkeurscookies zorgen ervoor dat een website informatie kan onthouden die van invloed is op het gedrag en de vormgeving van de website, zoals de taal van uw voorkeur of de regio waar u woont.
+                    <p class="mt-4">
+                      Voorkeurscookies zorgen ervoor dat een website informatie
+                      kan onthouden die van invloed is op het gedrag en de
+                      vormgeving van de website, zoals de taal van uw voorkeur
+                      of de regio waar u woont.
                     </p>
                   </div>
                 </button>
@@ -348,9 +378,15 @@
                           class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
                         >
                           <div class="flex justify-between items-center">
-                            <span class="text-sm font-medium text-gray-700"
-                              >Cookiebot</span
+                            <span
+                              class="text-gray-800 font-bold flex items-center"
                             >
+                              Site Search 360
+                              <span
+                                class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                                >2</span
+                              >
+                            </span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -367,8 +403,8 @@
                             </svg>
                           </div>
                           <a
-                            class="font-bold text-gray-500"
-                            href="https://www.cookiebot.com/goto/privacy-policy/"
+                            class="font-bold"
+                            href="https://www.sitesearch360.com/privacy-policy"
                             target="_blank"
                             rel="noopener noreferrer"
                             >Meer informatie over deze aanbieder &#10138;</a
@@ -376,15 +412,79 @@
                         </summary>
 
                         <div
-                          class="p-3 bg-gray-200 text-xs text-gray-700 divide-y divide-gray-300 space-y-4"
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
                         >
-                          <strong>CookieConsent</strong>
-                          <p>
-                            Slaat de cookiestatus van de gebruiker op voor het
-                            huidige domein
+                          <strong class="p-3">ssi--lastInteraction </strong>
+                          <p class="p-3">
+                            Noodzakelijk om de zoekbalkfunctie van de website te
+                            optimaliseren. De cookie zorgt voor nauwkeurige en
+                            snelle zoekresultaten.
                           </p>
-                          <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
-                          <p><strong>Type:</strong> HTTP-cookie</p>
+                          <p class="p-3">
+                            <strong>Maximale bewaartermijn:</strong> 1 dag
+                          </p>
+                          <p class="p-3"><strong>Type:</strong> HTTP-cookie</p>
+                        </div>
+                      </details>
+                      <details
+                        class="group border border-gray-100 rounded shadow-xs bg-gray-50"
+                      >
+                        <summary
+                          class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
+                        >
+                          <div class="flex justify-between items-center">
+                            <span
+                              class="text-gray-800 font-bold flex items-center"
+                            >
+                              www.dekbedovertrekkenenzo.nl
+                              <span
+                                class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                                >2</span
+                              >
+                            </span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                              />
+                            </svg>
+                          </div>
+                        </summary>
+
+                        <div
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
+                        >
+                          <strong class="p-3">COOKIELAW_ADS </strong>
+                          <p class="p-3">
+                            Bepaalt of de bezoeker de cookies heeft
+                            geaccepteerd.
+                          </p>
+                          <p class="p-3">
+                            <strong>Maximale bewaartermijn:</strong> 1 jaar
+                          </p>
+                          <p class="p-3"><strong>Type:</strong> HTTP-cookie</p>
+                        </div>
+                        <br />
+                        <div
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
+                        >
+                          <strong class="p-3">COOKIELAW_SOCIAL </strong>
+                          <p class="p-3">
+                            Bepaalt of de bezoeker de cookies heeft
+                            geaccepteerd.
+                          </p>
+                          <p class="p-3">
+                            <strong>Maximale bewaartermijn:</strong> 1 jaar
+                          </p>
+                          <p class="p-3"><strong>Type:</strong> HTTP-cookie</p>
                         </div>
                       </details>
                     </div>
@@ -393,6 +493,86 @@
                 </div>
               </div>
               <!-- Voorkeuren Cookies Accordion ends-->
+              <!-- Statistieken Cookies Accordion starts-->
+              <div
+                class="accordion-item border border-gray-200 rounded-lg overflow-hidden"
+              >
+                <button
+                  class="accordion-header w-full bg-gray-50 px-4 py-3 text-left flex justify-between items-center"
+                >
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="text-gray-800 font-bold flex items-center">
+                        <svg
+                          class="mr-4 accordion-icon w-5 h-5 text-gray-500 transform transition-transform duration-200 rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                          ></path>
+                        </svg>
+                        Statieken
+                        <span
+                          class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                          >0</span
+                        >
+                      </span>
+                      <label class="relative inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          id="toggle"
+                          class="sr-only peer"
+                          checked=""
+                        />
+                        <div
+                          class="w-11 h-6 bg-green-300 rounded-full peer transition-colors duration-300"
+                        ></div>
+                        <div
+                          class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
+                        ></div>
+                      </label>
+                    </div>
+                    <p class="mt-4">
+                      Statistische cookies helpen eigenaren van websites
+                      begrijpen hoe bezoekers hun website gebruiken, door
+                      anoniem gegevens te verzamelen en te rapporteren.
+                    </p>
+                  </div>
+                </button>
+                <div class="accordion-content open">
+                  <div class="p-4 bg-white">
+                    <!-- Sub-accordion for specific cookies -->
+                    <div class="mt-3">
+                      <details
+                        class="group border border-gray-100 rounded shadow-xs bg-gray-50"
+                        open=""
+                      >
+                        <summary
+                          class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
+                        >
+                          <div class="flex justify-between items-center">
+                            <span
+                              class="text-gray-800 font-bold flex items-center"
+                            >
+                              Wij gebruiken geen cookies van dit type
+                              
+                            </span>
+                            
+                          </div>
+                        </summary>
+
+                      </details>
+                    </div>
+                    <!-- Sub-accordion for specific cookies ends-->
+                  </div>
+                </div>
+              </div>
+              <!-- Statistieken Cookies Accordion ends-->
             </div>
           </div>
         </div>
