@@ -33,7 +33,7 @@
       }
       .accordion-content {
         max-height: 0;
-        overflow: hidden;
+        overflow: auto;
         transition: max-height 0.3s ease-out;
       }
       .accordion-content.open {
@@ -232,7 +232,9 @@
                           >10</span
                         >
                       </span>
-                      <label class=" cursor-pointer relative inline-flex items-center">
+                      <label
+                        class="cursor-pointer relative inline-flex items-center"
+                      >
                         <input
                           type="checkbox"
                           id="toggle"
@@ -310,7 +312,9 @@
                             huidige domein
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 jaar
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -366,7 +370,9 @@
                             bezoeker.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 dag</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 dag
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -424,7 +430,9 @@
                             gebruiker cookies ondersteunt.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 dag</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 dag
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -437,15 +445,15 @@
                           class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
                         >
                           <div class="flex justify-between items-center">
-                            <span
-                              class="text-gray-800 font-bold flex flex-col"
-                            >
-                                <p class="font-bold">platform.getqonfi.com</p>
-                                <p class="font-bold">sitesearch360.com</p>
-                                <p class="font-bold">webshopapp.com</p>
-                                <p class="font-bold">www.dekbedovertrekkenenzo.nl</p>
+                            <span class="text-gray-800 font-bold flex flex-col">
+                              <p class="font-bold">platform.getqonfi.com</p>
+                              <p class="font-bold">sitesearch360.com</p>
+                              <p class="font-bold">webshopapp.com</p>
+                              <p class="font-bold">
+                                www.dekbedovertrekkenenzo.nl
+                              </p>
                               <span
-                                class=" flex place-items-center font-bold text-xs bg-gray-300 w-4 h-4 rounded-full ml-2 px-1"
+                                class="flex place-items-center font-bold text-xs bg-gray-300 w-4 h-4 rounded-full ml-2 px-1"
                                 >4</span
                               >
                             </span>
@@ -471,50 +479,82 @@
                         >
                           <strong class="p-3">__cf_bm [x4]</strong>
                           <p class="p-3">
-                            Deze cookie wordt gebruikt om onderscheid te maken tussen mensen en bots. Dit is gunstig voor de website om juiste rapporten over het gebruik van de website te maken.
-
+                            Deze cookie wordt gebruikt om onderscheid te maken
+                            tussen mensen en bots. Dit is gunstig voor de
+                            website om juiste rapporten over het gebruik van de
+                            website te maken.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 dag</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 dag
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
                         <br />
-                        
                       </details>
-                      <details class="group border border-gray-100 rounded shadow-xs bg-gray-50" open="">
-                        <summary class="cursor-pointer w-full px-3 py-2 text-left flex flex-col">
+                      <details
+                        class="group border border-gray-100 rounded shadow-xs bg-gray-50"
+                        open=""
+                      >
+                        <summary
+                          class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
+                        >
                           <div class="flex justify-between items-center">
-                            <span class="text-gray-800 font-bold flex items-center">
+                            <span
+                              class="text-gray-800 font-bold flex items-center"
+                            >
                               www.dekbedovertrekkenenzo.nl
-                              <span class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1">3</span>
+                              <span
+                                class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                                >3</span
+                              >
                             </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                              ></path>
                             </svg>
                           </div>
                         </summary>
 
-                        <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+                        <div
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
+                        >
                           <strong class="p-3">COOKIELAW </strong>
                           <p class="p-3">
                             Bepaalt of de bezoeker de cookies heeft
                             geaccepteerd.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 jaar
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
-                        <br>
-                        <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+                        <br />
+                        <div
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
+                        >
                           <strong class="p-3">COOKIELAW_STATS</strong>
                           <p class="p-3">
-                            Slaat de cookiestatus van de gebruiker op voor het huidige domein
-
+                            Slaat de cookiestatus van de gebruiker op voor het
+                            huidige domein
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 jaar
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -553,13 +593,14 @@
                           >4</span
                         >
                       </span>
-                        <label class=" cursor-pointer relative inline-flex items-center">
+                      <label
+                        class="cursor-pointer relative inline-flex items-center"
+                      >
                         <input
                           type="checkbox"
                           id="toggle"
                           class="sr-only peer"
                           checked
-                          
                         />
                         <div
                           class="w-11 h-6 bg-gray-200 peer-checked:bg-green-300 rounded-full peer transition-colors duration-300"
@@ -567,7 +608,7 @@
                         <div
                           class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
                         ></div>
-                        </label>
+                      </label>
                     </div>
                     <p class="mt-4">
                       Voorkeurscookies zorgen ervoor dat een website informatie
@@ -631,7 +672,9 @@
                             snelle zoekresultaten.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 dag</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 dag
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -678,7 +721,9 @@
                             geaccepteerd.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 jaar
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -692,7 +737,9 @@
                             geaccepteerd.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 1 jaar
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
@@ -732,13 +779,14 @@
                           >0</span
                         >
                       </span>
-                        <label class=" cursor-pointer relative inline-flex items-center">
+                      <label
+                        class="cursor-pointer relative inline-flex items-center"
+                      >
                         <input
                           type="checkbox"
                           id="toggle"
                           class="sr-only peer"
                           checked
-                          
                         />
                         <div
                           class="w-11 h-6 bg-gray-200 peer-checked:bg-green-300 rounded-full peer transition-colors duration-300"
@@ -746,7 +794,7 @@
                         <div
                           class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
                         ></div>
-                        </label>
+                      </label>
                     </div>
                     <p class="mt-4">
                       Statistische cookies helpen eigenaren van websites
@@ -809,13 +857,14 @@
                           >33</span
                         >
                       </span>
-                        <label class=" cursor-pointer relative inline-flex items-center">
+                      <label
+                        class="cursor-pointer relative inline-flex items-center"
+                      >
                         <input
                           type="checkbox"
                           id="toggle"
                           class="sr-only peer"
                           checked
-                          
                         />
                         <div
                           class="w-11 h-6 bg-gray-200 peer-checked:bg-green-300 rounded-full peer transition-colors duration-300"
@@ -823,10 +872,15 @@
                         <div
                           class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
                         ></div>
-                        </label>
+                      </label>
                     </div>
                     <p class="mt-4">
-                      Marketingcookies worden gebruikt om bezoekers te volgen wanneer ze verschillende websites bezoeken. Hun doel is advertenties weergeven die zijn toegesneden op en relevant zijn voor de individuele gebruiker. Deze advertenties worden zo waardevoller voor uitgevers en externe adverteerders.
+                      Marketingcookies worden gebruikt om bezoekers te volgen
+                      wanneer ze verschillende websites bezoeken. Hun doel is
+                      advertenties weergeven die zijn toegesneden op en relevant
+                      zijn voor de individuele gebruiker. Deze advertenties
+                      worden zo waardevoller voor uitgevers en externe
+                      adverteerders.
                     </p>
                   </div>
                 </button>
@@ -877,79 +931,134 @@
                         <div
                           class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
                         >
-                          <strong class="p-3">ssi--lastInteraction </strong>
+                          <strong class="p-3">lastExternalReferrer </strong>
                           <p class="p-3">
-                            Noodzakelijk om de zoekbalkfunctie van de website te
-                            optimaliseren. De cookie zorgt voor nauwkeurige en
-                            snelle zoekresultaten.
+                            Achterhaalt op welke wijze de gebruiker naar de
+                            website is gekomen door zijn laatste URL-adres te
+                            registreren.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 dag</p>
-                            <p><strong>Type:</strong> HTTP-cookie</p>
-                          </div>
-                        </div>
-                      </details>
-                      <details
-                        class="group border border-gray-100 rounded shadow-xs bg-gray-50"
-                      >
-                        <summary
-                          class="cursor-pointer w-full px-3 py-2 text-left flex flex-col"
-                        >
-                          <div class="flex justify-between items-center">
-                            <span
-                              class="text-gray-800 font-bold flex items-center"
-                            >
-                              www.dekbedovertrekkenenzo.nl
-                              <span
-                                class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
-                                >2</span
-                              >
-                            </span>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                              />
-                            </svg>
-                          </div>
-                        </summary>
-
-                        <div
-                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
-                        >
-                          <strong class="p-3">COOKIELAW_ADS </strong>
-                          <p class="p-3">
-                            Bepaalt of de bezoeker de cookies heeft
-                            geaccepteerd.
-                          </p>
-                          <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
-                            <p><strong>Type:</strong> HTTP-cookie</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> Permanent
+                            </p>
+                            <p><strong>Type:</strong> Lokale HTML-opslag</p>
                           </div>
                         </div>
                         <br />
                         <div
                           class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
                         >
-                          <strong class="p-3">COOKIELAW_SOCIAL </strong>
+                          <strong class="p-3">lastExternalReferrerTime </strong>
                           <p class="p-3">
-                            Bepaalt of de bezoeker de cookies heeft
-                            geaccepteerd.
+                            Achterhaalt op welke wijze de gebruiker naar de
+                            website is gekomen door zijn laatste URL-adres te
+                            registreren.
                           </p>
                           <div class="p-3 flex justify-between">
-                            <p><strong>Maximale bewaartermijn:</strong> 1 jaar</p>
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> Permanent
+                            </p>
+                            <p><strong>Type:</strong> Lokale HTML-opslag</p>
+                          </div>
+                        </div>
+
+                        <br />
+                        <div
+                          class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300"
+                        >
+                          <strong class="p-3">_fbp </strong>
+                          <p class="p-3">
+                            Gebruikt door Facebook om een reeks
+                            advertentieproducten te leveren, zoals realtime
+                            bieden van externe adverteerders.
+                          </p>
+                          <div class="p-3 flex justify-between">
+                            <p>
+                              <strong>Maximale bewaartermijn:</strong> 3 maanden
+                            </p>
                             <p><strong>Type:</strong> HTTP-cookie</p>
                           </div>
                         </div>
                       </details>
+                      <details class="group border border-gray-100 rounded shadow-xs bg-gray-50">
+          <summary class="cursor-pointer w-full px-3 py-2 text-left flex flex-col">
+            <div class="flex justify-between items-center">
+              <span class="text-gray-800 font-bold flex items-center">
+                Google Analytics
+                <span class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1">6</span>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </div>
+            <a class="font-bold" href="https://business.safety.google/privacy/" target="_blank" rel="noopener noreferrer">Meer informatie over deze aanbieder ➚</a>
+          </summary>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">_ga</strong>
+            <p class="p-3">
+              Gebruikt om gegevens naar Google Analytics te verzenden over het apparaat en het gedrag van de bezoeker. Traceert de bezoeker op verschillende apparaten en marketingkanalen.
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> 2 jaar</p>
+              <p><strong>Type:</strong> HTTP-cookie</p>
+            </div>
+          </div>
+          <br/>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">_ga_#</strong>
+            <p class="p-3">
+              Gebruikt om gegevens naar Google Analytics te verzenden over het apparaat en het gedrag van de bezoeker. Traceert de bezoeker op verschillende apparaten en marketingkanalen.
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> 2 jaar</p>
+              <p><strong>Type:</strong> HTTP-cookie</p>
+            </div>
+          </div>
+          <br/>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">_gcl_au</strong>
+            <p class="p-3">
+              Gebruikt door Google AdSense om te experimenteren met de efficiëntie van advertenties op websites die hun services gebruiken.
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> 3 maanden</p>
+              <p><strong>Type:</strong> HTTP-cookie</p>
+            </div>
+          </div>
+          <br/>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">IDE</strong>
+            <p class="p-3">
+              Gebruikt door Google DoubleClick om de acties van de websitegebruiker te registreren en te rapporteren na het bekijken of klikken op een van de advertenties van de adverteerder met het doel de effectiviteit van een advertentie te meten en om gerichte advertenties aan de gebruiker te presenteren.
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> 400 dagen</p>
+              <p><strong>Type:</strong> HTTP-cookie</p>
+            </div>
+          </div>
+          <br/>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">NID</strong>
+            <p class="p-3">
+              In afwachting
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> 6 maanden</p>
+              <p><strong>Type:</strong> HTTP-cookie</p>
+            </div>
+          </div>
+          <br/>
+          <div class="flex flex-col p-3 bg-gray-200 divide-y divide-gray-300">
+            <strong class="p-3">pagead/1p-user-list/#</strong>
+            <p class="p-3">
+              Wordt gebruikt om bij te houden of de bezoeker interesse heeft getoond in specifieke producten of evenementen op meerdere websites en detecteert hoe de bezoeker tussen sites navigeert - Dit wordt gebruikt voor het meten van advertentie-inspanningen en vergemakkelijkt de betaling van verwijzingskosten tussen websites.
+            </p>
+            <div class="p-3 flex justify-between">
+              <p><strong>Maximale bewaartermijn:</strong> Sessie</p>
+              <p><strong>Type:</strong> Pixeltracker</p>
+            </div>
+          </div>
+        </details>
                     </div>
                     <!-- Sub-accordion for specific cookies ends-->
                   </div>
