@@ -1,0 +1,2 @@
+# cookiebot-banner
+cookiebot banner
