@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookiebot Banner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom transitions for accordion animations */
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .accordion-content.open {
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <!-- Cookiebot Banner Container -->
+    <div
+      class="cookiebot-banner bg-white shadow-lg rounded-lg max-w-3xl w-full mx-auto overflow-hidden"
+    >
+      <!-- Banner Header -->
+      <div class="p-4 sm:p-6 border-b border-gray-200">
+        <div class="flex justify-between items-center">
+          <h2 class="text-xl font-bold text-gray-800">Cookie voorkeuren</h2>
+          <button class="text-gray-500 hover:text-gray-700" id="close-banner">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="mt-2 text-gray-600 text-sm">
+          We gebruiken cookies om je ervaring op onze website te verbeteren. Je
+          kunt je voorkeuren hieronder aanpassen.
+        </p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="border-b border-gray-200">
+        <nav class="flex">
+          <button
+            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-blue-500 text-blue-600 font-medium"
+            data-tab="tab1"
+          >
+            Toestemming
+          </button>
+          <button
+            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-tab="tab2"
+          >
+            Details
+          </button>
+          <button
+            class="tab-button flex-1 py-3 px-4 text-center border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+            data-tab="tab3"
+          >
+            Over
+          </button>
+        </nav>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="tab-contents">
+        <!-- Tab 1: Overview -->
+        <div class="tab-content active" id="tab1">
+          <div class="p-4 sm:p-6">
+            <div class="space-y-4">
+              <strong>Deze website maakt gebruik van cookies</strong>
+              <p>
+                We gebruiken cookies om content en advertenties te
+                personaliseren, om functies voor social media te bieden en om
+                ons websiteverkeer te analyseren. Ook delen we informatie over
+                uw gebruik van onze site met onze partners voor social media,
+                adverteren en analyse. Deze partners kunnen deze gegevens
+                combineren met andere informatie die u aan ze heeft verstrekt of
+                die ze hebben verzameld op basis van uw gebruik van hun
+                services.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Cookie Details (with nested accordions) -->
+        <div class="tab-content hidden" id="tab2">
+          <div class="p-4 sm:p-6">
+            <!-- Main Accordion Items -->
+            <div class="space-y-3">
+              <!-- Noodzakelijke Cookies Accordion -->
+              <div
+                class="accordion-item border border-gray-200 rounded-lg overflow-hidden"
+              >
+                <button
+                  class="accordion-header w-full bg-gray-50 px-4 py-3 text-left flex justify-between items-center"
+                >
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="font-medium text-gray-800 flex items-center">
+                        <svg
+                          class="mr-4 accordion-icon w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                          /></svg
+                        >Noodzakelijke cookies
+                        <span
+                          class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                          >10</span
+                        >
+                      </span>
+                      <label class="relative inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          id="toggle"
+                          class="sr-only peer"
+                          checked
+                          disabled
+                        />
+                        <div
+                          class="w-11 h-6 bg-gray-200 rounded-full peer transition-colors duration-300"
+                        ></div>
+                        <div
+                          class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
+                        ></div>
+                      </label>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4">
+                      Noodzakelijke cookies helpen een website bruikbaarder te
+                      maken, door basisfuncties als paginanavigatie en toegang
+                      tot beveiligde gedeelten van de website mogelijk te maken.
+                      Zonder deze cookies kan de website niet naar behoren
+                      werken.
+                    </p>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <div class="p-4 bg-white">
+                    
+                    <!-- Sub-accordion for specific cookies -->
+                    <div class="mt-3 space-y-2">
+                      <details class="group border border-gray-100 rounded shadow-xs bg-gray-50">
+                        <summary class="cursor-pointer w-full px-3 py-2 text-left flex flex-col">
+                            <div class="flex justify-between items-center">
+                              <span class="text-sm font-medium text-gray-700">Cookiebot</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                              </svg>
+                            </div>
+                          <a class="font-bold text-gray-500" href="https://www.cookiebot.com/goto/privacy-policy/" target="_blank" rel="noopener noreferrer">Meer informatie over deze aanbieder  &#10138;</a>
+                        </summary>
+                          
+                        <div class="p-3 bg-gray-50 text-xs text-gray-600">
+                          <p><strong>Provider:</strong> Cookiebot</p>
+                          <p><strong>Doel:</strong> Slaat de cookie-voorkeuren op van de bezoeker</p>
+                          <p><strong>Verloopt na:</strong> 1 jaar</p>
+                        </div>
+                      </details>
+                    </div>
+                    <!-- Sub-accordion for specific cookies ends-->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Statistieken Cookies Accordion -->
+              <div
+                class="accordion-item border border-gray-200 rounded-lg overflow-hidden"
+              >
+                <button
+                  class="accordion-header w-full bg-gray-50 px-4 py-3 text-left flex justify-between items-center"
+                >
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="font-medium text-gray-800 flex items-center">
+                        <svg
+                          class="mr-4 accordion-icon w-5 h-5 text-gray-500 transform transition-transform duration-200"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                          /></svg
+                        >Statistieken cookies
+                        <span
+                          class="font-bold text-xs bg-gray-300 rounded-full ml-2 px-1"
+                          >4</span
+                        >
+                      </span>
+                      <label class="relative inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          id="toggle-statistics"
+                          class="sr-only peer"
+                        />
+                        <div
+                          class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-500 transition-colors duration-300"
+                        ></div>
+                        <div
+                          class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5"
+                        ></div>
+                      </label>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4">
+                      Statistische cookies helpen eigenaren van websites begrijpen hoe bezoekers hun website gebruiken, door anoniem gegevens te verzamelen en te rapporteren.
+                    </p>
+                  </div>
+                </button>
+                <div class="accordion-content">
+                  <div class="p-4 bg-white">
+                    <!-- Sub-accordion for specific cookies -->
+                    <div class="mt-3 space-y-2">
+                      <details class="group border border-gray-100 rounded">
+                        <summary class="cursor-pointer w-full px-3 py-2 text-left flex justify-between items-center">
+                          <span class="text-sm font-medium text-gray-700">_ga</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block h-4 w-4 transition-all duration-300 group-open:rotate-180 text-gray-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                          </svg>
+                        </summary>
+                        <div class="p-3 bg-gray-50 text-xs text-gray-600">
+                          <p><strong>Provider:</strong> Google Analytics</p>
+                          <p><strong>Doel:</strong> Registreert een uniek ID die wordt gebruikt om statistische gegevens te genereren</p>
+                          <p><strong>Verloopt na:</strong> 2 jaar</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Privacy Policy -->
+        <div class="tab-content hidden" id="tab3">
+          <div class="p-4 sm:p-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-3">
+              Privacy beleid
+            </h3>
+            <div class="text-sm text-gray-600 space-y-2">
+              <p>
+                Cookies zijn kleine tekstbestanden die door websites kunnen
+                worden gebruikt om gebruikerservaringen efficiënter te maken.
+              </p>
+              <p>
+                Volgens de wet mogen wij cookies op uw apparaat opslaan als ze
+                strikt noodzakelijk zijn voor het gebruik van de site. Voor alle
+                andere soorten cookies hebben we uw toestemming nodig.
+              </p>
+              <p>
+                Deze website maakt gebruik van verschillende soorten cookies.
+                Sommige cookies worden geplaatst door diensten van derden die op
+                onze pagina's worden weergegeven.
+              </p>
+              <p>
+                Via de cookieverklaring op onze website kunt u uw toestemming op
+                elk moment wijzigen of intrekken.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Footer -->
+      <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
+        <div class="flex flex-col sm:flex-row justify-between gap-3">
+          <button
+            class="order-2 sm:order-1 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded font-medium transition-colors"
+            id="decline-all"
+          >
+            Weigeren
+          </button>
+          <div class="order-1 sm:order-2 flex gap-2">
+            <button
+              class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded font-medium transition-colors"
+              id="accept-selected"
+            >
+              Selectie accepteren
+            </button>
+            <button
+              class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition-colors"
+              id="accept-all"
+            >
+              Alles accepteren
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tab switching functionality
+      document.querySelectorAll('.tab-button').forEach((button) => {
+        button.addEventListener('click', () => {
+          // Remove active state from all tabs
+          document.querySelectorAll('.tab-button').forEach((btn) => {
+            btn.classList.remove('border-blue-500', 'text-blue-600')
+            btn.classList.add('border-transparent', 'text-gray-500')
+          })
+
+          // Add active state to clicked tab
+          button.classList.remove('border-transparent', 'text-gray-500')
+          button.classList.add('border-blue-500', 'text-blue-600')
+
+          // Hide all tab contents
+          document.querySelectorAll('.tab-content').forEach((content) => {
+            content.classList.add('hidden')
+          })
+
+          // Show the corresponding tab content
+          const tabId = button.getAttribute('data-tab')
+          document.getElementById(tabId).classList.remove('hidden')
+        })
+      })
+
+      // Main accordions functionality
+      document.querySelectorAll('.accordion-header').forEach((header) => {
+        header.addEventListener('click', () => {
+          const content = header.nextElementSibling
+          const icon = header.querySelector('.accordion-icon')
+
+          content.classList.toggle('open')
+          icon.classList.toggle('rotate-180')
+        })
+      })
+
+      // Sub-accordions functionality
+      document.querySelectorAll('.sub-accordion-header').forEach((header) => {
+        header.addEventListener('click', () => {
+          const content = header.nextElementSibling
+          const icon = header.querySelector('.sub-accordion-icon')
+
+          content.classList.toggle('open')
+          icon.classList.toggle('rotate-180')
+        })
+      })
+
+      // Close banner
+      document.getElementById('close-banner').addEventListener('click', () => {
+        document.querySelector('.cookiebot-banner').style.display = 'none'
+      })
+
+      // Cookie consent buttons
+      document.getElementById('accept-all').addEventListener('click', () => {
+        document
+          .querySelectorAll('input[type="checkbox"]')
+          .forEach((checkbox) => {
+            checkbox.checked = true
+          })
+        setTimeout(() => {
+          document.querySelector('.cookiebot-banner').style.display = 'none'
+        }, 500)
+      })
+
+      document.getElementById('decline-all').addEventListener('click', () => {
+        document
+          .querySelectorAll('input[type="checkbox"]:not([disabled])')
+          .forEach((checkbox) => {
+            checkbox.checked = false
+          })
+        setTimeout(() => {
+          document.querySelector('.cookiebot-banner').style.display = 'none'
+        }, 500)
+      })
+
+      document
+        .getElementById('accept-selected')
+        .addEventListener('click', () => {
+          setTimeout(() => {
+            document.querySelector('.cookiebot-banner').style.display = 'none'
+          }, 500)
+        })
+
+      const toggle = document.getElementById('toggle')
+      toggle.addEventListener('change', () => {
+        console.log('Toggle is ' + (toggle.checked ? 'ON' : 'OFF'))
+      })
+    </script>
+  </body>
+</html>
